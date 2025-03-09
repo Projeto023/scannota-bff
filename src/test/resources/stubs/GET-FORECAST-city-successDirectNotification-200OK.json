@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/cidade/241/previsao.xml"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/xml"
+    },
+    "body": "<cidade>\n<nome>city-successDirectNotification</nome>\n<uf>DF</uf>\n<atualizacao>2025-02-06</atualizacao>\n<previsao>\n<dia>2025-02-07</dia>\n<tempo>pn</tempo>\n<maxima>29</maxima>\n<minima>18</minima>\n<iuv>0.0</iuv>\n</previsao>\n<previsao>\n<dia>2025-02-08</dia>\n<tempo>pn</tempo>\n<maxima>28</maxima>\n<minima>18</minima>\n<iuv>0.0</iuv>\n</previsao>\n<previsao>\n<dia>2025-02-09</dia>\n<tempo>pn</tempo>\n<maxima>28</maxima>\n<minima>18</minima>\n<iuv>0.0</iuv>\n</previsao>\n<previsao>\n<dia>2025-02-10</dia>\n<tempo>pn</tempo>\n<maxima>29</maxima>\n<minima>18</minima>\n<iuv>0.0</iuv>\n</previsao>\n</cidade>"
+  }
+}

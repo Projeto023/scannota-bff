@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/listaCidades?city=not_exist"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/xml"
+    },
+    "body": "<cidades/>"
+  }
+}

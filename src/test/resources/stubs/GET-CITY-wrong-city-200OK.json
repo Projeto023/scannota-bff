@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/listaCidades?city=wrong_city"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/xml"
+    },
+    "body": "<cidades>\n<cidade>\n<nome>wrong-cityyyyy</nome>\n<uf>DF</uf>\n<id>241</id>\n</cidade>\n<cidade>\n<nome>wrong-cityyyyy</nome>\n<uf>MG</uf>\n<id>241</id>\n</cidade>\n</cidades>"
+  }
+}

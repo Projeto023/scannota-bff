@@ -1,0 +1,56 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: desafio-backend-it-arc-api
+  profiles:
+    active: ${ENV:dev}
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:h2:mem:testdb}
+    username: sa
+    password: password
+    driver-class-name: org.h2.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  cache:
+    type: caffeine
+  caffeine:
+    spec: maximumSize=1000,expireAfterWrite=10m
+
+client:
+  mock:
+    url: http://localhost:${wiremock.server.port:5000}
+
+clients:
+  feign:
+    cptec:
+      url: http://localhost:${wiremock.server.port:5000}
+
+security:
+  jwt:
+    uri: /**
+    header: Authorization
+    prefix: Bearer
+    secret: secret
+
+springdoc:
+  version: '@project.version@'
+  api-docs:
+    groups:
+      enabled: false
+  swagger-ui:
+    path: /swagger-ui.html
+    display-request-duration: true
+    groups-order: DESC
+    operationsSorter: method
+    disable-swagger-default-url: false

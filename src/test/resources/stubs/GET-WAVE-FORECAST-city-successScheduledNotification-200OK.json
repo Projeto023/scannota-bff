@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/cidade/111/dia/0/ondas.xml"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/xml"
+    },
+    "body": "<cidade>\n<nome>city-successScheduledNotification</nome>\n<uf>RJ</uf>\n<atualizacao>06-02-2025</atualizacao>\n<manha>\n<dia>06-02-2025 12h Z</dia>\n<agitacao>Fraco</agitacao>\n<altura>0.7</altura>\n<direcao>SSE</direcao>\n<vento>5.3</vento>\n<vento_dir>NE</vento_dir>\n</manha>\n<tarde>\n<dia>06-02-2025 18h Z</dia>\n<agitacao>Fraco</agitacao>\n<altura>0.9</altura>\n<direcao>S</direcao>\n<vento>9.1</vento>\n<vento_dir>E</vento_dir>\n</tarde>\n<noite>\n<dia>06-02-2025 21h Z</dia>\n<agitacao>Fraco</agitacao>\n<altura>1.0</altura>\n<direcao>S</direcao>\n<vento>8.4</vento>\n<vento_dir>ENE</vento_dir>\n</noite>\n</cidade>"
+  }
+}

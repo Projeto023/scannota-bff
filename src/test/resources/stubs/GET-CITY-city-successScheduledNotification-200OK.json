@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/listaCidades?city=city-successScheduledNotification"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/xml"
+    },
+    "body": "<cidades>\n<cidade>\n<nome>city-successScheduledNotification</nome>\n<uf>DF</uf>\n<id>111</id>\n</cidade>\n<cidade>\n<nome>city-successDirectNotification</nome>\n<uf>MG</uf>\n<id>111</id>\n</cidade>\n</cidades>"
+  }
+}
