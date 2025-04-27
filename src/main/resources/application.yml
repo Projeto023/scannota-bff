@@ -1,31 +1,19 @@
 server:
-  port: 8080
+  port: 8081
 
 spring:
   application:
-    name: desafio-backend-it-arc-api
+    name: scannota-bff
   profiles:
     active: ${ENV:dev}
-  datasource:
-    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/postgres}
-    username: ${SPRING_DATASOURCE_USERNAME:admin}
-    password: ${SPRING_DATASOURCE_PASSWORD:secret}
-    driver-class-name: org.postgresql.Driver
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-    hibernate:
-      ddl-auto: update
-    show-sql: false
   cache:
     type: caffeine
   caffeine:
     spec: maximumSize=1000,expireAfterWrite=10m
 
 client:
-  mock:
-    url: ${MOCK_CLIENT_URL:http://mock:8082}
+  scannota-api:
+    url: ${SCANNOTA_API_CLIENT_URL:}
 
 security:
   jwt:
