@@ -1,4 +1,4 @@
-package com.scannota.bff.desafiobackenditarc.config;
+package com.scannota.bff.config;
 
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.cloud.contract.wiremock.AutoConfigureWireMock;

@@ -14,8 +14,13 @@ public class ScannotaApiClientServiceImpl implements ScannotaApiClientService {
 
     @Override
     public ProcessContentResponseDTO processContent(String content) {
-        final ProcessContentRequestDTO requestDTO = ProcessContentRequestDTO
-                .builder().extractedText(content).build();
-        return scannotaApiFeignClient.processContent(requestDTO);
+        try {
+            final ProcessContentRequestDTO requestDTO = ProcessContentRequestDTO
+                    .builder().extractedText(content).build();
+            return scannotaApiFeignClient.processContent(requestDTO);
+        } catch (Exception e) {
+            log.error("[ScannotaApiClientService] Error processing content: {}", e.getMessage());
+            throw new RuntimeException(e.getMessage());
+        }
     }
 }

@@ -17,9 +17,7 @@ public class AnalyzeInvoiceServiceImpl implements AnalyzeInvoiceService {
 
     @Override
     public AnalyseInvoiceResponseDTO process(AnalyzeInvoiceRequestDTO request) {
-
         final ProcessContentResponseDTO response = scannotaApiClientService.processContent(request.getContent());
         return AnalyseInvoiceResponseDTO.builder().content(response.getData()).build();
-
     }
 }

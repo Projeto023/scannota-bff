@@ -1,6 +1,6 @@
-package com.scannota.bff.desafiobackenditarc.integration;
+package com.scannota.bff.integration;
 
-import com.scannota.bff.desafiobackenditarc.config.IntegrationTest;
+import com.scannota.bff.config.IntegrationTest;
 import com.example.desafiobackenditarc.controller.UserController;
 import com.example.desafiobackenditarc.controller.advicer.ApiControllerAdvicer;
 import com.example.desafiobackenditarc.model.User;

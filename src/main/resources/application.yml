@@ -14,13 +14,14 @@ spring:
 client:
   scannota-api:
     url: ${SCANNOTA_API_CLIENT_URL:}
+    token: ${SCANNOTA_API_CLIENT_TOKEN:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMn0.KMUFsIDTnFmyG3nMiGM6H9FNFUROf3wh7SmqJp-QV30}
 
 security:
   jwt:
     uri: /**
     header: Authorization
     prefix: Bearer
-    secret: secret
+    secret: a-string-secret-at-least-256-bits-long
 management:
   endpoints:
     web:

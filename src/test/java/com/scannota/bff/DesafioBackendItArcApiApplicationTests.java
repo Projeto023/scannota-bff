@@ -1,4 +1,4 @@
-package com.scannota.bff.desafiobackenditarc;
+package com.scannota.bff;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

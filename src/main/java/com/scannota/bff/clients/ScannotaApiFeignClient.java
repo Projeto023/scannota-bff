@@ -6,8 +6,10 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(name = ScannotaApiClientConfig.NAME, url = ScannotaApiClientConfig.URL)
+@FeignClient(name = ScannotaApiClientConfig.NAME,
+        url = ScannotaApiClientConfig.URL,
+        configuration = {ScannotaApiClientConfig.class})
 public interface ScannotaApiFeignClient {
-    @PostMapping("/api/v1/analyze")
+    @PostMapping("/api/v1/invoice/analyze")
     ProcessContentResponseDTO processContent(@RequestBody ProcessContentRequestDTO requestDTO);
 }
