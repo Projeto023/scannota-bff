@@ -10,6 +10,7 @@ import lombok.Getter;
 @Builder
 @Getter
 public class ProcessContentResponseDTO {
-    private String status;
-    private Object data;
+    private Boolean success;
+    private String message;
+    private Object records;
 }

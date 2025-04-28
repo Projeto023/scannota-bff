@@ -13,7 +13,7 @@ spring:
 
 client:
   scannota-api:
-    url: ${SCANNOTA_API_CLIENT_URL:}
+    url: ${SCANNOTA_API_CLIENT_URL:localhost:8080}
     token: ${SCANNOTA_API_CLIENT_TOKEN:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMn0.KMUFsIDTnFmyG3nMiGM6H9FNFUROf3wh7SmqJp-QV30}
 
 security:
@@ -39,3 +39,9 @@ springdoc:
     groups-order: DESC
     operationsSorter: method
     disable-swagger-default-url: false
+
+feign:
+  client:
+    config:
+      default:
+        load-balancer-enabled: true
