@@ -16,11 +16,11 @@ public class ApiControllerAdvicer {
     @ExceptionHandler({EntityNotFoundException.class})
     public ResponseEntity handleEntityNotFoundException(final EntityNotFoundException ex) {
         log.error(ex.getMessage());
-        return buildErrorResponse(ex.getMessage(), HttpStatus.NOT_FOUND, null);
+        return buildErrorResponse(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
     @ExceptionHandler({Exception.class})
     public ResponseEntity handleGenericException(final Exception ex) {
         log.error(ex.getMessage());
-        return buildErrorResponse(ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR, null);
+        return buildErrorResponse(ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
